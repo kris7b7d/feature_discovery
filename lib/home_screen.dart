@@ -220,7 +220,7 @@ class _DescribeFeatureOverlayState extends State<DescribedFeatureOverlay> {
           final isBackgroundCentered = isCloseToTopOrBottom(anchor);
           final backgroundRadius =
               screenSize.width * (isBackgroundCentered ? 1.0 : 0.75) * 1.0; // screenSize.width * 1.0;
-          final backgoundPosition = isBackgroundCentered
+          final backgroundPosition = isBackgroundCentered
               ? anchor
               : Offset(
                   screenSize.width / 2.0 + (isOnLeftHalfOfScreen(anchor) ? -20.0 : 20.0),
@@ -232,7 +232,7 @@ class _DescribeFeatureOverlayState extends State<DescribedFeatureOverlay> {
           return Stack(
             children: <Widget>[
               CenterAbout(
-                position: backgoundPosition,
+                position: backgroundPosition,
                 child: Container(
                   width: 2 * backgroundRadius,
                   height: 2 * backgroundRadius,
