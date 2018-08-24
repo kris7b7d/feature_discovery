@@ -19,8 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         icon: Icons.menu,
         color: Colors.green,
         title: 'Just how you want it',
-        description:
-            'Tap the menu icon to switch accounts, change settings & more',
+        description: 'Tap the menu icon to switch accounts, change settings & more',
         child: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {},
@@ -33,8 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           icon: Icons.search,
           color: Colors.green,
           title: 'Just how you want it',
-          description:
-              'Tap the menu icon to switch accounts, change settings & more',
+          description: 'Tap the menu icon to switch accounts, change settings & more',
           child: IconButton(
             icon: Icon(Icons.search),
             onPressed: () {},
@@ -55,8 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
         icon: Icons.add,
         color: Colors.green,
         title: 'Just how you want it',
-        description:
-            'Tap the menu icon to switch accounts, change settings & more',
+        description: 'Tap the menu icon to switch accounts, change settings & more',
         child: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {},
@@ -134,8 +131,7 @@ class _ContentState extends State<Content> {
               icon: Icons.drive_eta,
               color: Colors.green,
               title: 'Just how you want it',
-              description:
-                  'Tap the menu icon to switch accounts, change settings & more',
+              description: 'Tap the menu icon to switch accounts, change settings & more',
               child: FloatingActionButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.green,
@@ -218,23 +214,16 @@ class _DescribeFeatureOverlayState extends State<DescribedFeatureOverlay> {
         overlayBuilder: (BuildContext context, Offset anchor) {
           final touchTargetRadius = 44.0;
           final contentOrientation = getContentOrientation(anchor);
-          final contentOffsetMultiplier =
-              contentOrientation == DescribedFeatureContentOrientation.below
-                  ? 1.0
-                  : -1.0;
-          final contentY = anchor.dy +
-              (contentOffsetMultiplier * (touchTargetRadius + 20.0));
-          final contentFractionalOffset =
-              contentOffsetMultiplier.clamp(-1.0, 0.0);
+          final contentOffsetMultiplier = contentOrientation == DescribedFeatureContentOrientation.below ? 1.0 : -1.0;
+          final contentY = anchor.dy + (contentOffsetMultiplier * (touchTargetRadius + 20.0));
+          final contentFractionalOffset = contentOffsetMultiplier.clamp(-1.0, 0.0);
           final isBackgroundCentered = isCloseToTopOrBottom(anchor);
-          final backgroundRadius = screenSize.width *
-              (isBackgroundCentered ? 1.0 : 0.75) *
-              1.0; // screenSize.width * 1.0;
+          final backgroundRadius =
+              screenSize.width * (isBackgroundCentered ? 1.0 : 0.75) * 1.0; // screenSize.width * 1.0;
           final backgoundPosition = isBackgroundCentered
               ? anchor
               : Offset(
-                  screenSize.width / 2.0 +
-                      (isOnLeftHalfOfScreen(anchor) ? -20.0 : 20.0),
+                  screenSize.width / 2.0 + (isOnLeftHalfOfScreen(anchor) ? -20.0 : 20.0),
                   anchor.dy +
                       (isOnTopHalfOfScreen(anchor)
                           ? -(screenSize.width / 2.0) + 40.0
